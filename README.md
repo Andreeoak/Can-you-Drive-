@@ -1,8 +1,6 @@
-Claro! Aqui está um Markdown bem estilizado e explicativo para documentar seu primeiro projeto com Vue.js 3.4:
 
----
 
-# 🚗 Can You Drive? — First Vue.js 3.4 Project
+# 🚗 Can You Drive? 
 
 > A minimal interactive app built with Vue 3 Composition API that tells you whether you can drive based on your age.
 
