@@ -26,12 +26,19 @@
 <body>
   <div id="app">
     <div>
-      {{message}}
-    </div>
-    <div>
-      Can you drive? <span :class="{can: canDrive==='Yes', cannot: canDrive==='No'}">{{canDrive}}</span>
+      <div>
+        <label>Enter yout age: </label>
+        <input v-model="age"/>
+      </div>
+      <div>
+        {{message}}
+      </div>
+      <div>
+          Can you drive? <span :class="{can: canDrive==='Yes', cannot: canDrive==='No'}">{{canDrive}}</span>
+      </div>
     </div>
   </div>
+    
   <script>
     const { createApp, ref, computed} = Vue;
 
@@ -43,14 +50,13 @@
             console.log("Computed property called");
               return age.value >= 18 ? 'Yes' : 'No';
           });
-
-          setTimeout(()=>{
-              console.log("Changed!")
-              age.value = 18;
-              message.value += " World";
-          }, 5000);
-
-          return { message , canDrive};
+        
+        setTimeout(()=>{
+            console.log("Changed!")
+            message.value += " World";
+        }, 5000);
+        
+          return { message , canDrive, age};
         },
      };
 
